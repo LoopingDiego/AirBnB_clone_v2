@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Run a Flask application
+""" Flask web application
 """
 
 from flask import Flask
@@ -7,9 +7,19 @@ app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
-def hello_hbnb():
-    ''' Hello flask '''
+def greetings():
+    """ Hello function
+    """
+
     return 'Hello HBNB!'
+
+
+@app.route('/hbnb', strict_slashes=False)
+def hbnb():
+    """ hbnb direction
+    """
+
+    return 'HBNB'
 
 
 if __name__ == '__main__':
