@@ -69,3 +69,8 @@ class FileStorage:
                 del FileStorage.__objects[formats]
         except BaseException:
             pass
+
+    def close(self):
+        """ deserialize the JSON file to objects """
+
+        self.reload()
