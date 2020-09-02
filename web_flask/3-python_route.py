@@ -30,7 +30,8 @@ def c_route(txt):
     return "C {}".format(txt.replace('_', ' '))
 
 
-@app.route('/python/(<txt>)', strict_slashes=False)
+@app.route('/python', strict_slashes=False)
+@app.route('/python/<txt>', strict_slashes=False)
 def python_route(txt='is cool'):
     """ String with C as first char
     """
