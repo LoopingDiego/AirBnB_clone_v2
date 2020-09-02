@@ -33,16 +33,18 @@ def c_route(txt):
 @app.route('/python', strict_slashes=False)
 @app.route('/python/<txt>', strict_slashes=False)
 def python_route(txt='is cool'):
-    """ String with C as first char
+    """ String with Python as first word
     """
 
     return "Python {}".format(txt.replace('_', ' '))
 
 
-@app.route('/number/<n>', strict_slashes=False)
+@app.route('/number/<int:n>', strict_slashes=False)
 def number_route(n):
-    if int(n):
-        return "{} is a number".format(n)
+    """ number testing
+    """
+
+    return "{} is a number".format(n)
 
 
 if __name__ == '__main__':
