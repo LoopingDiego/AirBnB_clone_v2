@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 '''
 classes:
 FileStorage: serialize/deserialize objects to JSON
